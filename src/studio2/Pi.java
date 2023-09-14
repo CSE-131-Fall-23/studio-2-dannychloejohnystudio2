@@ -5,20 +5,22 @@ import java.util.Scanner;
 public class Pi {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		 Scanner in = new Scanner(System.in);
-			int numdarts = in.nextInt();
-     double x = Math.random();
-     double y = Math.random();
-     int hit = 0;
-     for(int i=0; i <= numdarts; i++)
-     {
-    	 if(Math.sqrt(x*x + y*y) <= 1);
-	     {
-	    	 hit++;
-	     }
-     }
-	     
+		Scanner in = new Scanner(System.in);
+		System.out.print("How many darts?");
+		int numdarts = in.nextInt();
+		int hit = 0;
+		for(int i=0; i <= numdarts; i++)
+		{
+			double x = Math.random();
+			double y = Math.random();
+			double num = Math.sqrt((Math.pow(x, 2)) + (Math.pow(y, 2)));
+			if(num <= 1.0)
+			{
+				hit++;
+			}
+		}
+		double pi = hit*4.0;
+		System.out.println(pi);
 
 	}
 
