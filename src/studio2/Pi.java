@@ -21,7 +21,6 @@ public class Pi {
 		}
 		double pi = hit*4.0;
 		System.out.println(pi);
-
 	}
 
 }
